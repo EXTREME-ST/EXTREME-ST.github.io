@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>登录界面</title>
+		<link rel="stylesheet" type="text/css" href="css/pageChange.css">
+		<link rel="shortcut icon" href="img/icoo.png">
+		<script type="text/javascript" src="js/pageChange.js"></script>
+		<script src="js/jquery.js"></script>
+		<style>
+			html {
+			    filter: gray;
+			    //-webkit-filter: grayscale(100%);
+			    }
+		</style>
+	</head>
+	<body>
+		<div class="control">
+			<div class="item">
+				<div class="active">登录</div>
+				<div>注册</div>
+			</div>
+			<div class="content">
+				<form action="Home.html" id="MyForm" onsubmit="return submit_from()">
+					<div style="display: block;">
+						<p>账号</p>
+						<input type="text" placeholder="admin" name="username" id="username" />
+						<p>密码</p>
+						<input type="text" placeholder="123456" name="password" id="password" />
+						<br>
+						<input type="submit" id="login" value="登录">
+					</div>
+				</form>
+				<form action="#" id="MyForm1">
+					<div>
+					<p>用户名</p>
+					<input type="text" placeholder="username" id="username" />
+					<p>设置密码</p>
+					<input type="text" placeholder="password" id="password" />
+					<p>确认密码</p>
+					<input type="text" placeholder="confirm password" />
+					<p>邮箱</p>
+					<input type="text" placeholder="mail" />
+					<br>
+					<input type="submit" value="注册">
+				</div>
+				</form>
+			</div>
+		</div>
+		<script>
+			//获取文本框value实现用户登录
+			function submit_from() {
+				//获取文本框value
+				var username = $("#username").val();
+				var password = $("#password").val();
+				if (username == "admin" && password == "123456") {
+					alert("登录成功!");
+					return true;
+					
+				} else {
+					alert("登录失败！")
+					return false;
+				}
+			}
+			
+			$(function() {
+				//设置文本框初始值
+				$("#username").val("请输入账号");
+				$("#password").val("请输入密码");
+				//获得焦点时，清空文本框初始值
+				$("#username").focus(function() {
+					//获取文本框value
+					var username = $("#username").val();
+					if (username == "请输入账号") {
+						$("#username").val("");
+					}
+				})
+				$("#password").focus(function() {
+					//获取文本框value
+					var username = $("#password").val();
+					if (username == "请输入密码") {
+						$("#password").val("")
+					}
+				})
+				//失去焦点时，设置文本框初始值
+				$("#username").blur(function() {
+					//获取文本框value
+					var username = $("#username").val();
+					if (username == "") {
+						$("#username").val("请输入账号");
+					}
+				})
+				$("#password").blur(function() {
+					//获取文本框value
+					var username = $("#password").val();
+					if (username == "") {
+						$("#password").val("请输入密码")
+					}
+				})
+			})		
+		</script>
+	</body>
+</html>

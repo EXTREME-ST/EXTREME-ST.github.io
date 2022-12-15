@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>首页</title>
+		<link rel="shortcut icon" href="img/icoo.png">
+		<style>
+			body{
+				margin: 0%;
+			}
+			#title{
+				width: 100%;
+				height: 60px;
+				background-color: black;
+				position: fixed;
+				z-index: 999;
+			}
+			.container div{
+				//border: 1px solid #000000;
+				height: 100vh;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 150px;
+			}
+			#ico{
+				margin:0px 0px 40px 30px;
+				//border: 1px solid #ffffff;
+				height: 32px;
+				width: 32px;
+				float: left;
+				color: white;
+				font-size: 30px;
+			}
+			#D4{
+				width: 800px;
+				height: 100px;
+				//border: 1px solid #ffffff;	
+				background-color: #000000;
+				color: white;
+				font-size:10px;
+			}
+			div ul li{
+				font-style: none;
+				list-style:none;
+				display:inline;
+				color: white;
+				margin-left: 100px;
+			}
+			nav{
+				/* background-color: rgba(red, green, blue, alpha); */
+				background-color: rgba(0, 0, 0, 10);
+				width: 100%;
+				height: 60px;
+				line-height: 60px;
+				position: fixed;
+				text-align: center;
+			}
+			nav a{
+				color: #fff;
+				font-size: 20px;
+				margin: 30px;
+				text-decoration: none;
+			}
+			nav a:hover{
+				text-decoration: underline;
+			}
+			.container div:nth-child(1){
+				height: 700px;
+				background-color: #111827;
+			}
+			.container div:nth-child(2){
+				background-color: #1f2937;
+			}
+			.container div:nth-child(3){
+				background-color: #111827;
+			}
+			.container div:nth-child(4){
+				background-color: #000000;
+				height: 200px;
+			}
+			#A1{
+				height: 400px;
+				width: 500px;
+				border: 20px solid #55557f;
+				position: relative;
+				border-radius:15px;
+			}
+			#A2{
+				height: 400px;
+				width: 500px;
+				//border: 1px solid #ffffff;
+				position: relative;
+				background-color: #111827;
+				color: aqua;
+				font-size:50px;
+			}
+			#B1{
+				height: 400px;
+				width: 500px;
+				//border: 1px solid #ffffff;
+				position: relative;
+				background-color: #1f2937;
+				color: blueviolet;
+				font-size:50px;
+			}
+			#B2{
+				height: 400px;
+				width: 500px;
+				border: 20px solid #ffff7f;
+				position: relative;
+				background-color: #1f2937;
+				border-radius:15px;
+			}
+			#C1{
+				height: 400px;
+				width: 500px;
+				border: 20px solid #55aaff;
+				position: relative;
+				border-radius:15px;
+			}
+			#C2{
+				height: 400px;
+				width: 500px;
+				//border: 1px solid #ffffff;
+				position: relative;
+				background-color: #111827;
+				color: chartreuse;
+				font-size:50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="title">
+			<nav>
+			<div id="ico">
+				<!-- <img src="img/ico.png" alt=""> -->
+				Minecraft
+			</div>	
+			<a href="#A">首页</a>
+			<a href="#B">简介</a>
+			<a href="#C">下载</a>
+			<a href="#D">声明</a>
+			</nav>
+		</div>
+		<div class="container">
+			<div class="item" id="A">
+				<div id="A1">
+					<img src="img/icoa.png" alt="">
+				</div>
+				<div id="A2">
+					<p>这是一段文字</p>
+				</div>
+			</div>
+			<div class="item" id="B">
+				<div id="B1">
+					<p>这是一段文字</p>
+				</div>
+				<div id="B2">
+					<img src="img/icoa.png" alt="">
+				</div>
+			</div>
+			<div class="item" id="C">
+				<div id="C1">
+					<img src="img/icoa.png" alt="">
+				</div>
+				<div id="C2">
+					<p>这是一段文字</p>
+				</div>
+			</div>
+			<div class="item" id="D">
+				<div id="D4">
+					<p>隐私协议</p>
+					<br>
+					<p>Copyright © 2022-2023 EXTREME</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
